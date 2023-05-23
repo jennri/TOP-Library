@@ -1,9 +1,16 @@
 /* can't seem to remove border on html */
+:root{
+    --backgroundcolor: #e0e0e0;
+    --fontcolor: #646464;
+    --contrastcolor: #BF98A0;
+    --contrastcolorlight: #C9ADA7;
+}
+
 html {
     height: 100vh;
     width: 100%;
     border: 0px;
-    background-color: #413543;
+    background-color: var(--backgroundcolor);
     font-family: "Noto Sans", sans-serif;
 
 }
@@ -21,7 +28,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #3b313d;
+    background-color: #c7c7c7;
     grid-column-start: 1;
     grid-column-end: 13;
     grid-row-start: 1;
@@ -29,7 +36,7 @@ html {
 }
 
 .library-title {
-    color: beige;
+    color: var(--fontcolor);
     font-size: 1.5em;
 }
 
@@ -48,7 +55,7 @@ html {
 }
 
 .divider {
-    background-color: beige;
+    background-color: var(----fontcolor);
     margin: 0px 10px 0px 10px;
     ;
     padding: 0px 1px 0px 1px;
@@ -71,7 +78,7 @@ html {
 }
 
 .collection-container>div {
-    border: 1px solid #f0eb8d7f;
+    border: 3px solid var(--contrastcolor);
     border-radius: 25px;
 }
 
@@ -82,18 +89,18 @@ html {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #9a1eb35d;
+    background-color: #64646463;
 }
 .modal {
     display: none;
     z-index: 1;
-    top: 32%;
-    left: 40%;
+    top: 20%;
+    left: 43%;
     position: absolute;
-    border: 2px solid #F0EB8D;
+    border: 2px solid var(--contrastcolor);
     border-radius: 25px;
-    background-color: #3b313d;
-    color: beige;
+    background-color: var(--backgroundcolor);
+    color: var(----fontcolor);
     padding: 40px;
 }
 
