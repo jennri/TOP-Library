@@ -70,8 +70,8 @@ html {
     grid-row-start: 2;
     display: grid;
     /* figure a way to make these grid stay the same shape despite adding 100s of divs */
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    grid-template-rows: repeat(10, minmax(250px, 1fr));
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-rows: repeat(20, minmax(300px, 1fr));
     gap: 10px;
     margin: 0px 80px 0px 80px;
 
@@ -81,6 +81,55 @@ html {
     border: 3px solid var(--contrastcolor);
     border-radius: 25px;
 }
+
+.card-header {
+    margin: 10px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.card-body {
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card-footer{
+    font-size: 12px;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+.card-remove {
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    font: #646464;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    height: 20px;
+}
+
+.card-remove:hover {
+    background-color: #c5c4c4;
+    transition: 0.5s;
+
+
+
+}
+
+/* Add button Modal */
 
 .modal-container {
     display: none;
@@ -107,7 +156,6 @@ html {
 
 .modal div {
     padding: 10px;
-
 }
 
 .modal h2 {
