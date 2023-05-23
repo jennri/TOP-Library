@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Library</title>
+
+</head>
+
+<body>
+    <div class="site">
+        <div class="header">
+            <div class="library-title">
+                <h1>your library</h1>
+            </div>
+            <div class="account-container"></div>
+            <button class="account">Account</button>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="header2">
+        <div class="button-container">
+
+            <div class="search-container">
+                <button class="search-book-btn">Search</button>
+            </div>
+            <div class="divider"></div>
+            <div class="add-container">
+                <button class="add-book-btn" id="addbutton">Add</button>
+
+            </div>
+
+        </div>
+        <div class="collection-container">
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+            <div> Sample card</div>
+
+        </div>
+
+        <div class="modal-container" id="addModalContainer"></div>
+        <div class="modal" id="addModal">
+            <form class="add-book">
+                <h2>add a book</h2>
+                <div><input type="text" id="title" maxlength="100" placeholder="Name of book" required>
+                </div>
+                <div><input type="text" id="author" maxlength="100" placeholder="Author" required>
+                </div>
+                <div><input type="number" id="pages" maxlength="10000" placeholder="Number of pages" required>
+                </div>
+                <div><input type="number" id="rating" max="10" min="1" placeholder="Rate 1-10">
+                </div>
+                <div><button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
