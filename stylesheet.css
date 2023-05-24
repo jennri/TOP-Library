@@ -77,9 +77,12 @@ html {
 
 }
 
+/* Making the outside div positon relative allows you to make the
+divs inside of it absolute position relative to it */
 .collection-container>div {
     border: 3px solid var(--contrastcolor);
     border-radius: 25px;
+    position: relative;
 }
 
 .card-header {
@@ -99,17 +102,26 @@ html {
 .card-footer{
     font-size: 12px;
     margin: 0px 10px 0px 10px;
-    display: flex;
     justify-content: space-between;
-    position: relative;
-    bottom: 0;
 }
 
+.card-read {
+    position: absolute;
+    bottom: 14px;
+    display: flex;
+    justify-content: flex-end;
+}
 
+.card h2, h5, p {
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
 
+.card-title {
+    overflow-wrap: break-word;
+    hyphens: manual;
 
-
-
+}
 
 .card-remove {
     text-align: center;
@@ -125,9 +137,33 @@ html {
     background-color: #c5c4c4;
     transition: 0.5s;
 
+}
 
+.card-read {
+    width: 94%;
+    justify-content: end;
+    display: flex;
+    align-items: center;
 
 }
+
+#one, #two{
+    appearance: none;
+    background-color: #646464;
+    border-radius: 25px;
+    height: 15px;
+    width: 15px;
+}
+
+#one:checked {
+    background-color: rgb(2, 155, 2);
+}
+
+#two:checked {
+    background-color: rgb(204, 151, 52);
+}
+
+
 
 /* Add button Modal */
 

@@ -1,10 +1,8 @@
+
+
 //nice looking book cards
 //toggle read or not read one one button, changes color of card too
-//remove add modul past filled entry
-//search function
-//buttons for add/search and account
 //nicer modal
-//inputs when adding book needs to have works broken to dit card and not overlap each other
 
 
 let myLibrary = [];
@@ -23,6 +21,7 @@ function Book(title, author, pages, rating) {
 //These values are added to function Book(title, author, pages, rating)
 //Which then are pushed into the myLibrary array with all the other books
 //render() will loop through the array and display it all onto HTML
+//Removes the data written in the modal
 //
 //
 function addBookToLibrary() {
@@ -33,6 +32,10 @@ function addBookToLibrary() {
     let newBook = new Book(title, author, pages, rating);
     myLibrary.push(newBook);
     render();
+    title = '';
+    author = '';
+    pages = '';
+    rating = '';
 }
 
 //
@@ -74,10 +77,14 @@ function render() {
         <div class="card-footer"> 
         <p>${book.pages} pgs</p>
         <p>${book.rating} out of 10</p>
-        <button class="card-readprogress">Read?</button> 
+        <div class="card-read">
+        <div class= "read-container">
+        <input class="button" type="radio" name="toggle" id="one" />
+        <input class="button" type="radio" name="toggle" id="two" /></div></div>
         `
         libraryEle.appendChild(bookEle);
     }
+
 }
 
 //Rather then the ID of the submit btn, you want to refer to the ID of the form
@@ -110,4 +117,9 @@ addBtn.addEventListener('click', openModal)
 const modalContainer = document.querySelector('#addModalContainer')
 modalContainer.addEventListener('click', closeModal)
 
-
+//
+//
+//Read Buttons
+//
+//Copied from https://webcodespace.com/how-to-create-a-three-state-toggle-switch-using-html-css-and-javascript/
+//Can't seem to work
